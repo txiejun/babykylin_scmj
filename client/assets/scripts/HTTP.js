@@ -69,7 +69,7 @@ function sendRequest(path, data, handler, extraUrl) {
         clearTimeout(timer);
         if (xhr.readyState === 4 && (xhr.status >= 200 && xhr.status < 300)) {
             // console.log("http res(" + xhr.responseText.length + "):" + xhr.responseText);
-            cc.log("request from [" + xhr.responseURL + "] data [", ret, "]");
+            // cc.log("request from [" + xhr.responseURL + "] data [", ret, "]");
             var respText = xhr.responseText;
 
             var ret = null;
@@ -82,7 +82,7 @@ function sendRequest(path, data, handler, extraUrl) {
                     errmsg: e
                 };
             }
-
+            cc.log("request from [" + xhr.responseURL + "] data [", ret, "]");
             if (handler) {
                 handler(ret);
             }
