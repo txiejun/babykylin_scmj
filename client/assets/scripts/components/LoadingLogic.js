@@ -31,10 +31,13 @@ cc.Class({
                 self._progress = completedCount/totalCount;
             }
         };
-        
-        cc.loader.loadResAll("textures", function (err, assets) {
+
+        // cc.loader.loadResAll("textures", function (err, assets) {
+        //     self.onLoadComplete();
+        // });
+        cc.loader.loadResDir("textures", function (err, assets) {
             self.onLoadComplete();
-        });      
+        });
     },
     
     onLoadComplete:function(){

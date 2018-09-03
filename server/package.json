@@ -15,7 +15,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "account": "node ./account_server/app.js ../configs_mac.js",
+    "hall": "node ./hall_server/app.js ../configs_mac.js",
+    "game": "node ./game_server/app.js ../configs_mac.js",
+    "start": "npm run account && npm run hall && npm run game"
   },
   "repository": {
     "type": "git",
